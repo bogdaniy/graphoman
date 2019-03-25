@@ -1,0 +1,56 @@
+* {
+    outline: 0 !important;
+}  
+
+.container {
+    height: auto!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: background-color .5s;
+    position: relative;
+}
+
+.container > div:last-of-type {
+    margin-bottom: 60px;
+}
+
+:global .theme__night {
+    background: #242f3e;
+}
+
+.themeToggle {
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+
+    color: #108be3;
+    background-color: #ffffff;
+    box-shadow: -10px -16px 80px 6px #ffffff;
+    transition: color .5s;
+    transition: box-shadow .5s;
+    transition: background-color .5s;
+}
+
+:global(.theme__night) .themeToggle {
+    background-color: #242f3e;
+    box-shadow: -10px -16px 80px 6px #242f3e;
+    color: #36a8f1;
+}
+
+.title {
+    color: #242f3e;
+    font-weight: 300;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+:global(.theme__night) .title {
+    color: #ffffff;
+}

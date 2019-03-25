@@ -1,0 +1,29 @@
+.xAxis {
+    width: 100%;
+    font-size: 9px;
+    color: #8c8c8c;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.xAxisWrapper {
+    display: flex;
+    will-change: transform;
+    transition: transform .5s ease-in-out;
+}
+
+.xAxisLabel {
+    flex: 1 0 auto;
+    white-space: nowrap;
+    transition: width .2s linear;
+    /* visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms, width 350ms; */
+}
+
+.xAxisLabelDissappear {
+    opacity: 0;
+    visibility:hidden;
+    width: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+}

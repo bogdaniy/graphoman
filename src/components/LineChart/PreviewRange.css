@@ -1,0 +1,68 @@
+.previewRange {
+    height: 60px;
+    margin: 26px 5px;
+}
+
+.previewRangeOverlay {
+    display: flex;
+    position: relative;
+    top: -61px;
+}
+
+.previewRangeLeft, .previewRangeRight {
+    background-color: rgba(236, 244, 248, 0.7);
+    height: 60px;
+    transition: background-color .5s;
+}
+
+:global(.theme__night) .previewRangeLeft, :global(.theme__night) .previewRangeRight {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.previewRangeSelectorLeft, .previewRangeSelectorRight {
+    width: 7px;
+    height: 60px;
+    background-color: rgba(0, 91, 164, 0.2);
+    cursor: ew-resize;
+    z-index: 1;
+    transition: background-color .5s;
+}
+
+:global(.theme__night) .previewRangeSelectorLeft, :global(.theme__night) .previewRangeSelectorRight {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.previewRangeCenter {
+    height: 60px;
+    border-width: 1.5px 0 1.5px 0;
+    border-style: solid;
+    border-color: rgba(0, 91, 164, 0.2);
+    cursor: grab;
+    z-index: 1;
+    transition: border-color .5s;
+}
+
+:global(.theme__night) .previewRangeCenter {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.previewRangeCenter:active {
+    cursor: grabbing;
+}
+
+.previewRangeChart {
+    transform: translate(0, 5px);
+    width: 100%;
+}
+
+.chartLine {
+    fill: transparent;
+    stroke-width: 1.2px;
+    stroke-linejoin: round;
+    opacity: 1;
+    transition: opacity .35s linear;
+}
+
+.chartLine.chartLineHidden {
+    opacity: 0;
+}

@@ -1,0 +1,33 @@
+.batya {
+    max-width: 1200px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.filtersContainer {
+    display: flex;
+}
+
+.filtersContainer > div:not(:first-child) {
+    margin-left: 20px;
+}
+
+.title {
+    margin-top: 15px;
+    font-size: 19px;
+    font-weight: 600;
+    align-self: center;
+    color: #222222;
+    transition: color .5s;
+}
+
+:global(.theme__night) .title {
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .title {
+        padding: 0 0 10px 10px;
+    }
+  }
+  

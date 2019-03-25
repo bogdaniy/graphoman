@@ -1,0 +1,65 @@
+.chips {
+    border-radius: 100px;
+    border: 1px solid rgb(230, 236, 240);
+    display: flex;
+    padding: 5px 10px 4px 5px;
+    transition: border-color .5s;
+    transition: color .5s;
+}
+
+:global(.theme__night) .chips {
+    color: white;
+    border-color: rgb(52, 70, 88); 
+}
+
+.chips.chipsAvailable:hover {
+    cursor: pointer;
+    background: rgba(230, 236, 240, .5);
+}
+
+.chips:not(.chipsAvailable) {
+    background: rgba(230, 236, 240, .2);   
+}
+
+.chipsCheckbox {
+    display: flex;
+    transform: translate(0, 1px);
+    border-radius: 100px;
+    height: 16px;
+    width: 16px;
+    top: 1px;
+}
+
+.chipsCheckbox::after {
+    background: #fff;
+    height: 14px;
+    width: 14px;
+    content: ' ';
+    position: relative;
+    border-radius: 101px;
+    left: 1px;
+    top: 1px;
+    display: block;
+    transition: opacity .3s linear;
+}
+
+.chipsChecked .chipsCheckbox::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.chipsUnChecked .chipsCheckbox::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.chipsCheckMark {
+    fill: white;
+    margin-left: 3px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.chipsName {
+    padding-left: 12px;
+}

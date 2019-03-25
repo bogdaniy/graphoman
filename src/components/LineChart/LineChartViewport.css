@@ -1,0 +1,59 @@
+.chartWrapper {
+    position: relative;
+}
+
+.chart {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: visible;
+}
+
+.pathHolder {
+    will-change: transform;
+    transition: transform .2s ease-out;
+}
+
+.chartLine {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    opacity: 1;
+    transition: opacity .3s ease-in;
+    will-change: d;
+}
+
+.chartLine.chartLineHidden {
+    opacity: 0;
+}
+
+.chartGridLine {
+    fill: transparent;
+    stroke: #f2f4f5;
+    stroke-width: 2px;
+    opacity: 1;
+    transition: opacity .3s linear .5s;
+}
+
+:global(.theme__night) .chartGridLine {
+    stroke: rgba(93, 109, 129, 0.5);
+}
+
+.chartGridLineEasyOut {
+    opacity: 0;
+}
+
+.chartGridText {
+    font-size: 9px;
+    fill: #8c8c8c;
+}
+
+.activeLine {
+    fill: transparent;
+    stroke: #8c8c8c;
+    stroke-width: 1.5px;
+}
+
+.activeDot {
+    fill: #ffffff;
+    stroke-width: 3;
+}
